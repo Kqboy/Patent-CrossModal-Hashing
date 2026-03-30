@@ -103,7 +103,7 @@ CNN + Transformer 编码器
 .
 ├── README.md
 ├── docs/
-│   ├── patent.pdf
+│   ├── 一种基于长短映射的跨模态哈希检索方法.pdf
 │
 ├── demo/
 │   ├── inference_demo.py
@@ -117,10 +117,6 @@ CNN + Transformer 编码器
 ├── train/
 │   ├── train.py
 │   ├── loss.py
-│
-├── results/
-│   ├── retrieval_examples.png
-│   ├── comparison.md
 │
 └── requirements.txt
 ```
