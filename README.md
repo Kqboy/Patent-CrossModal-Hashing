@@ -106,7 +106,6 @@ The system consists of:
 ├── README.md
 ├── docs/
 │   ├── patent.pdf
-│   ├── method.md
 │
 ├── demo/
 │   ├── inference_demo.py
