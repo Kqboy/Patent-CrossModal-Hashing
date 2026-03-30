@@ -1,104 +1,101 @@
 # 🔍 Cross-Modal Hashing via Long-Short Mapping
 
-> 📌 An engineering-oriented demonstration of our patented method for efficient cross-modal retrieval.
+> 📌 本仓库展示了我们专利方法的工程化实现，用于高效的跨模态检索。
 
 ---
 
-## 📜 Patent
+## 📜 专利说明
 
-This repository is based on our patent:
+本仓库基于以下专利：
 
 **一种基于长短映射的跨模态哈希检索方法**
 
-* 📄 [View Patent PDF](./docs/一种基于长短映射的跨模态哈希检索方法.pdf)
-* 🌐 Online version: https://kqboy.github.io/一种基于长短映射的跨模态哈希检索方法.pdf
+* 📄 [查看专利 PDF](./docs/一种基于长短映射的跨模态哈希检索方法.pdf)
+* 🌐 在线地址：https://kqboy.github.io/一种基于长短映射的跨模态哈希检索方法.pdf
 
 ---
 
-## 🧠 Overview![JjU1ajLCiFGe_xUm0RyN1ypGiEkgRIxwFn_y6uBUMjka3RwDdy1s1_FB5nqVszduXx3lLC8YuX9t4oU3B1mm6DUSVWDY7D5cAVQ4KztiqDgV_r5pKEftzKKYQBNmFmQpV8NCKb3d2Q4KE20keB_jTDWP6Gs60SgW5p4sOqFLhFY](https://github.com/user-attachments/assets/b4143ecf-294a-427a-a005-929d4891c65f)
+## 🧠 概述
 
+跨模态检索的目标是在不同模态之间进行数据搜索（例如，用图像检索文本，或用文本检索图像）。
 
-Cross-modal retrieval aims to search data across different modalities (e.g., retrieving images using text or vice versa).
+传统方法通常存在以下问题：
 
-Traditional methods often suffer from:
+* 存储成本高（连续特征）
+* 计算复杂度高
+* 低维哈希映射过程中存在信息损失
 
-* High storage cost (continuous features)
-* High computational complexity
-* Information loss in low-dimensional hashing
+### 💡 我们的解决方案
 
-### 💡 Our Solution
+我们提出了一种**基于长短映射的跨模态哈希检索框架**，该框架：
 
-We propose a **Long-Short Mapping based Cross-Modal Hashing Framework**, which:
-
-* Learns **high-dimensional hash representations**
-* Projects them into **low-dimensional space**
-* Preserves retrieval performance via a learned projection matrix
-
----
-
-## 🚀 Key Contributions
-
-* 🔹 **Long-Short Mapping Mechanism**
-
-  * Reduces hash dimension while maintaining accuracy
-
-* 🔹 **Softmax-based Hash Learning**
-
-  * Avoids non-differentiability issues of traditional hashing (e.g., sign function)
-
-* 🔹 **Dual-Loss Optimization**
-
-  * Similarity Loss → improves retrieval accuracy
-  * Quantization Loss → improves discretization quality
-
-* 🔹 **Transformer-based Feature Extraction**
-
-  * Unified modeling for image and text modalities
+* 学习**高维哈希表示**
+* 通过投影矩阵将其映射到**低维空间**
+* 在保证检索性能的同时实现降维
 
 ---
 
-## 🏗️ Method Pipeline
+## 🚀 主要贡献
 
-The overall workflow of the proposed method:
+* 🔹 **长短映射机制**
+
+  * 在降低哈希编码维度的同时保持检索精度
+
+* 🔹 **基于 Softmax 的哈希学习**
+
+  * 避免了传统哈希方法（如符号函数）中不可导的问题
+
+* 🔹 **双损失优化**
+
+  * 相似性损失 → 提升检索准确率
+  * 量化损失 → 提升离散化质量
+
+* 🔹 **基于 Transformer 的特征提取**
+
+  * 对图像和文本模态进行统一建模
+
+---
+
+## 🏗️ 方法流程
+
+本方法的整体工作流程如下：
 
 ```text
-Image/Text Input
+图像 / 文本输入
         ↓
-Transformer Encoder
+Transformer 编码器
         ↓
-High-Dimensional Hash Representation
+高维哈希表示
         ↓
-Projection Matrix (Long → Short Mapping)
+投影矩阵（长 → 短映射）
         ↓
-Low-Dimensional Hash Code
+低维哈希编码
         ↓
-Hamming Distance Retrieval
-```
+汉明距离检索
 
 ---
 
 ## ⚙️ Model Architecture
 
-The system consists of:
+系统包含以下模块：
 
-* 🖼️ **Image Encoder**
+🖼️ 图像编码器
 
-  * CNN + Transformer Encoder
+CNN + Transformer 编码器
 
-* 📝 **Text Encoder**
+📝 文本编码器
 
-  * Byte Encoding + Transformer Encoder
+字节编码 + Transformer 编码器
 
-* 🔢 **Hash Learning Module**
+🔢 哈希学习模块
 
-  * Multi-Layer Perceptron (MLP)
-  * Softmax-based binary encoding
+多层感知机
 
-* 🔁 **Projection Module**
+基于 Softmax 的二值编码
 
-  * Learns mapping from high-dim to low-dim hash codes
+🔁 投影模块
 
----
+学习从高维到低维哈希编码的映射
 
 ## 📦 Project Structure
 
@@ -110,7 +107,6 @@ The system consists of:
 │
 ├── demo/
 │   ├── inference_demo.py
-│   ├── sample_data/
 │
 ├── models/
 │   ├── image_encoder.py
@@ -133,7 +129,7 @@ The system consists of:
 
 ## ▶️ Demo
 
-Run a simple cross-modal retrieval demo:
+运行一个简单的跨模态检索示例：
 
 ```bash
 python demo/inference_demo.py
@@ -141,16 +137,19 @@ python demo/inference_demo.py
 
 ### Example Tasks
 
-* 🖼️ Image → Retrieve relevant text
-* 📝 Text → Retrieve relevant images
+🖼️ 图像 → 检索相关文本
+
+📝 文本 → 检索相关图像
 
 ---
 
 ## 📊 Retrieval Strategy
 
-* Convert all database samples into **low-dimensional hash codes**
-* Convert query into hash code
-* Compute similarity using:
+将数据库中的所有样本转换为低维哈希编码
+
+将查询样本也转换为哈希编码
+
+使用以下方式计算相似度：
 
 ```text
 Hamming Distance
@@ -162,15 +161,15 @@ Hamming Distance
 
 ## 📉 Loss Function
 
-The model is optimized using:
+模型通过以下损失进行优化：
 
 ### 1️⃣ Similarity Loss (Ls)
 
-* Preserves semantic similarity between image and text
+* 保持图像与文本之间的语义相似性
 
 ### 2️⃣ Quantization Loss (Lq)
 
-* Reduces error between continuous and discrete hash codes
+* 减小连续哈希与离散哈希编码之间的误差
 
 ### Final Objective:
 
@@ -182,10 +181,13 @@ L = Ls + α * Lq
 
 ## 🧪 Applications
 
-* 🔍 Image-Text Retrieval
-* 🧠 Multimodal Search Engines
-* 📱 Recommendation Systems
-* 🗂️ Large-scale Multimedia Indexing
+🔍 图像-文本检索
+
+🧠 多模态搜索引擎
+
+📱 推荐系统
+
+🗂️ 大规模多媒体索引
 
 ---
 
