@@ -15,7 +15,8 @@ This repository is based on our patent:
 
 ---
 
-## 🧠 Overview
+## 🧠 Overview![JjU1ajLCiFGe_xUm0RyN1ypGiEkgRIxwFn_y6uBUMjka3RwDdy1s1_FB5nqVszduXx3lLC8YuX9t4oU3B1mm6DUSVWDY7D5cAVQ4KztiqDgV_r5pKEftzKKYQBNmFmQpV8NCKb3d2Q4KE20keB_jTDWP6Gs60SgW5p4sOqFLhFY](https://github.com/user-attachments/assets/b4143ecf-294a-427a-a005-929d4891c65f)
+
 
 Cross-modal retrieval aims to search data across different modalities (e.g., retrieving images using text or vice versa).
 
@@ -210,9 +211,9 @@ pip install -r requirements.txt
 
 ## 👨‍💻 Authors
 
-* 闫坤祺
 * 刘学亮
 * 涂俊锋
+* 闫坤祺
 * 郝世杰
 * 洪日昌
 * 汪萌
