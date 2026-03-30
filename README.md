@@ -10,8 +10,8 @@ This repository is based on our patent:
 
 **一种基于长短映射的跨模态哈希检索方法**
 
-* 📄 [View Patent PDF](./docs/patent.pdf)
-* 🌐 Online version: https://kqboy.github.io/patent1.pdf
+* 📄 [View Patent PDF](./docs/一种基于长短映射的跨模态哈希检索方法.pdf)
+* 🌐 Online version: https://kqboy.github.io/一种基于长短映射的跨模态哈希检索方法.pdf
 
 ---
 
