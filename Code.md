@@ -3,11 +3,13 @@
 
 项目目录结构：
 
-<img width="265" height="239" alt="{E81FC6BB-41F4-4FB4-A5DB-24C71D793F92}" src="https://github.com/user-attachments/assets/58ad0c74-f920-4ee7-b283-750bfbb0bdc2" />
+<img width="265" height="239" alt="{E81FC6BB-41F4-4FB4-A5DB-24C71D793F92}" src="https://github.com/user-attachments/assets/58ad0c74-f920-4ee7-b283-750bfbb0bdc2" />            <img width="251" height="206" alt="{C6B2CA52-9201-459D-9E63-61900E219ED7}" src="https://github.com/user-attachments/assets/f249ebc7-1b8b-4900-a07b-703a5f528518" />
+
 
 
 📖
 整体数据流：
+
 ![4_K1ThlTvU6LWcHBlP1-t0l_dVQn0ocarthqXkP10nk772Znh_ok6DNOy0d6cZkBQR1J3Aej9pIU5Bi3g4t4QzA2qI5ysYWDm08yJd8ANX6KS7zRrhztAPsRJIZ_MfIH8pmoBzkeBxhJe-Vq3pSSYSaI99DDr5aA0ETD7bkL8cpo-oFmwNa6z28HwBsRbQh-](https://github.com/user-attachments/assets/016334d0-c51e-425e-a75a-d5d214fc50f9)
 
 每个模态的数据先经过特征提取，生成哈希码。
